@@ -1,23 +1,9 @@
 { lib
 , stdenv
 , fetchFromGitHub
-# , rustPlatform
+, rustPlatform
 , darwin
 }:
-
-# Remove these code after next stable channel release (24.11)
-with import <nixpkgs>
-{
-  overlays = [
-    (import (fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))
-  ];
-};
-let
-  rustPlatform = makeRustPlatform {
-    cargo = rust-bin.stable.latest.default;
-    rustc = rust-bin.stable.latest.default;
-  };
-in
 
 rustPlatform.buildRustPackage rec {
   pname = "asport";
