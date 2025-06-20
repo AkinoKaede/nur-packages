@@ -16,13 +16,8 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-Rp1/4QHbtjAE0j8ObW5MzGxh/CTINWYQ3shbuHKGVvg=";
   };
 
-  cargoHash = "sha256-FCzmkxTeDvgFNYw1RxtgOmLFZeFbKIGUOQABtLV29Mo=";
-
-  buildInputs = lib.optionals stdenv.isDarwin (with darwin.apple_sdk.frameworks; [
-    Security
-  ]);
+  cargoHash = "sha256-rO5/yUJ5HzlDCJYuP0T2MrR/M2id023OjOMwUmAMlME=";
   
-
   meta = with lib; {
     description = "A quick and secure reverse proxy based on QUIC for NAT traversal.";
     homepage = "https://github.com/AkinoKaede/asport";
