@@ -22,6 +22,6 @@ rustPlatform.buildRustPackage rec {
     description = "A quick and secure reverse proxy based on QUIC for NAT traversal.";
     homepage = "https://github.com/AkinoKaede/asport";
     licenses = licenses.gpl3Plus;
-    maintainers = with maintainers; [ akinokaede ];
+    # maintainers = with maintainers; [ akinokaede ];
   };
 }
