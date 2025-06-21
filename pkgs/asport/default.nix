@@ -7,17 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "asport";
-  version = "0.1.1";
+  version = "0.1.2";
 
   src = fetchFromGitHub {
     owner = "AkinoKaede";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-Rp1/4QHbtjAE0j8ObW5MzGxh/CTINWYQ3shbuHKGVvg=";
+    hash = "sha256-u9bVC7zzJ8cb8cflgFWM6ExBWnR/GiyBYOJVfLIljx0=";
   };
 
-  useFetchCargoVendor = true;
-  cargoHash = "sha256-FCzmkxTeDvgFNYw1RxtgOmLFZeFbKIGUOQABtLV29Mo=";
+  cargoLock.lockFile = ./Cargo.lock;
   
   meta = with lib; {
     description = "A quick and secure reverse proxy based on QUIC for NAT traversal.";
