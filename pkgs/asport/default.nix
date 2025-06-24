@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/AkinoKaede/asport";
     licenses = licenses.gpl3Plus;
     # maintainers = with maintainers; [ akinokaede ];
+    broken = true; # LazyCell is not stable in Rust.
   };
 }
