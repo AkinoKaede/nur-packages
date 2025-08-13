@@ -7,13 +7,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "asport";
-  version = "0.1.2";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "AkinoKaede";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-u9bVC7zzJ8cb8cflgFWM6ExBWnR/GiyBYOJVfLIljx0=";
+    hash = "sha256-HD0c4MlGDd3c9HjgzAL5v3Hlgjdo8cU8ZNrSWsv6gd4=";
   };
 
   cargoLock.lockFile = ./Cargo.lock;
@@ -23,6 +23,5 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/AkinoKaede/asport";
     licenses = licenses.gpl3Plus;
     # maintainers = with maintainers; [ akinokaede ];
-    broken = true; # LazyCell is not stable in Rust.
   };
 }
