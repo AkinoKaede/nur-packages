@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-HD0c4MlGDd3c9HjgzAL5v3Hlgjdo8cU8ZNrSWsv6gd4=";
   };
 
-  cargoLock.lockFile = ./Cargo.lock;
+  cargoHash = "sha256-Rg0wdsTkH9L327CWi3VN0fGkB+zW48/D98V74GRlwTQ=";
   
   meta = with lib; {
     description = "A quick and secure reverse proxy based on QUIC for NAT traversal.";
